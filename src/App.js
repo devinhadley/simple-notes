@@ -4,39 +4,37 @@ import { useState } from 'react'
 import Notes from './components/Notes'
 import TextRegion from './components/TextRegion'
 
-const App = () =>  {
-    const notes_default = 
+const notes_default =   
 
 
-    [
+[
 
-        {
+    {
 
-            "title": "Note #1",
-            "content": "Note #1 content.",
-            "id": 0
+        "title": "Note #1",
+        "content": "Note #1 content.",
+        "id": 0
 
-        },
+    },
 
-        {
+    {
 
-            "title": "Note #2",
-            "content": "Note #2 content.",
-			"id": 1
+        "title": "Note #2",
+        "content": "Note #2 content.",
+        "id": 1
 
-        }] 
-    
+    }] 
 
-    if (localStorage.getItem('notes_data') === null){
+if (localStorage.getItem('notes_data') === null){
 
         localStorage.setItem('notes_data', JSON.stringify(notes_default))
         localStorage.setItem('id_safe_count', 1)
 
     } 
-
-
     
-    const storage = JSON.parse(localStorage.getItem('notes_data'))
+const storage = JSON.parse(localStorage.getItem('notes_data'))
+
+const App = () =>  {
 
     const[notes, setNotes] = useState(storage)
 
