@@ -163,7 +163,7 @@ const App = () =>  {
 
             <Notes removeNote={removeNote} showDelete={showDelete} toggleContent={openNote} data={notes}/>
             <center><button onClick={addNote} className="btn btn-outline-success mb-2">Add Note</button></center>
-            <center><button onClick={() => setShowDelete(!showDelete)} className="btn btn-sm btn-outline-danger mb-2">Toggle Delete</button></center>
+            <center><button onClick={() => setShowDelete(!showDelete)} className={!showDelete ? "btn btn-sm btn-outline-danger mb-2": "btn btn-sm btn-outline-primary mb-2"}>Toggle Delete</button></center>
             
 
 		</div>
