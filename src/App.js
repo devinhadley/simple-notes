@@ -65,11 +65,9 @@ const App = () =>  {
 
         notes.forEach(note => note.id == id && (modified_storage[notes.indexOf(note)]['content'] = formData )) 
         
-
         setNotes(modified_storage)
-        localStorage.setItem('notes_data', JSON.stringify(modified_storage))
-        
 
+        localStorage.setItem('notes_data', JSON.stringify(modified_storage))
 
     } 
 
@@ -89,17 +87,11 @@ const App = () =>  {
 
         notes.forEach((note, i) => note.id == id && (active_note_index = i)) 
 
-
         modified_storage[active_note_index]['title'] = formData
-
 
         setNotes(modified_storage)
 
         localStorage.setItem('notes_data', JSON.stringify(modified_storage))
-       
-
-
-
 
     }
 
@@ -121,14 +113,10 @@ const App = () =>  {
        setCurrentContent(notes[notes.length - 1]) // Instead get last element in array.
 
 
-
-
-
    } 
 
     const removeNote = (id) => { // Still need to integrate into UI 
         console.log("hello")
-
 
         const temp_notes = notes 
 
@@ -143,13 +131,6 @@ const App = () =>  {
 		localStorage.setItem('notes_data', JSON.stringify(temp_notes))
         
         setCurrentContent({'title': 'Simple Notes', 'content': 'Press a note to display it.', 'id': -1}) 
-
-
-        
-        
-
-        
-
 
 
     }

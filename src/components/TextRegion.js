@@ -31,7 +31,6 @@ const TextRegion = ({ activeNote, updateContent, saveNote, saveTitle }) => {
                 <textarea className="content form-control" type="text" onChange={((e) => setFormText(e.target.value))} value={formText}/>
             
             
-            
 
 		<button style={{'float': 'right'}} className="btn btn-primary mt-2 mr-2" onClick={(e) => saveNote(e, activeNote.id, formText)}>Save</button>
 
