@@ -23,7 +23,7 @@ const Note = ({ dataId, title, toggleContent, showDelete, removeNote }) => {
                 </button>
             )}
 
-            <p>{titleContent}</p>
+            <p style={{ color: "white" }}>{titleContent}</p>
         </div>
     );
 };

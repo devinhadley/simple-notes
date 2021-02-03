@@ -31,7 +31,7 @@ const App = () => {
     console.log(notes);
 
     const [currentContent, setCurrentContent] = useState({
-        title: "Simple Notes",
+        title: "Welcome",
         content: "Press a note to display it.",
         id: -1,
     });
@@ -94,11 +94,10 @@ const App = () => {
 
         localStorage.setItem("id_safe_count", last_id);
 
-        setCurrentContent(notes[notes.length - 1]); // Instead get last element in array.
+        setCurrentContent(notes[notes.length - 1]);
     };
 
     const removeNote = (id) => {
-        // Still need to integrate into UI
         console.log("hello");
 
         let active_note_index;
@@ -123,11 +122,19 @@ const App = () => {
     return (
         <div>
             <div className="sidenav">
+                <center>
+                    <h4 style={{ color: "white" }}>Simple Notes</h4>
+                </center>
                 <Notes
                     removeNote={removeNote}
                     showDelete={showDelete}
                     toggleContent={openNote}
                     data={notes}
+                />
+                <hr
+                    style={{
+                        "background-color": "white",
+                    }}
                 />
                 <center>
                     <button

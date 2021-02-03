@@ -38,7 +38,7 @@ const TextRegion = ({ activeNote, updateContent, saveNote, saveTitle }) => {
 
                 <button
                     style={{ float: "right" }}
-                    className="btn btn-primary mt-2 mr-2"
+                    className="btn btn-outline-success mt-2 mr-2"
                     onClick={(e) => saveNote(e, activeNote.id, formText)}
                 >
                     Save
